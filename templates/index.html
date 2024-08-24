@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Oswald:wght@200..700&display=swap"
+        rel="stylesheet">
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <div class="main_container">
+        {% include 'header.html' %}
+
+        {% block content %}
+        <div class="content">
+            <div class="pic"></div>
+            <div class="about">
+                <h1>Welcome to My Portfolio! </h1>
+                <h2>I am Sanjay. I am Currently working as a Junior Software Engineer.</h2>
+            </div>
+        </div>
+        {% endblock %}
+    </div>
+</body>
+
+</html>
