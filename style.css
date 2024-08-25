@@ -40,7 +40,7 @@ a {
 .pic {
     width: 250px;
     height: 250px;
-    background-image: url("../images/pic1.jpg");
+    background-image: url("images/pic1.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
