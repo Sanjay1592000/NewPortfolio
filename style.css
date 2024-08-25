@@ -10,7 +10,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(90deg, var(--bg-color3), var(--bg-color4))
+    background: linear-gradient(90deg, var(--bg-color3), var(--bg-color4));
 }
 
 .main_container {
@@ -27,8 +27,15 @@ body {
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
-    height: 15%;
+    min-height: 100px;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+}
+
+.header a{
+    display: block;
+    width: 0%;
+    border-bottom: 2px solid transparent;
+    transition: 500ms ease-in-out;
 }
 
 a {
@@ -60,25 +67,28 @@ a {
 }
 
 .content,
-.skillcontent,
 .exp,
+.skillcontent,
 .contacts {
     width: 80%;
     height: 80%;
+    animation: start_animation 500ms ease-in-out;
 }
 
 .skillcontent {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    height: max-content;
+    padding: 25px 0;
     gap: 5%;
-    padding: 5%;
 }
 
 .skills {
-    background-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    background-color: rgba(46, 46, 46, 0.1);
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.3);
     border-radius: 20px;
     padding: 0 5%;
+    margin: 5% 0%;
 }
 
 .lists {
@@ -137,6 +147,35 @@ a {
 .clicks {
     width: 50px;
     height: 50px;
+    border-radius: 10px;
+    transition: 500ms ease-in-out; 
+}
+
+/*animation*/
+.clicks:hover{
+    transform: translateY(-5px);
+}
+.header a:hover{
+    width: 100%;
+    border-bottom: 2px solid white;
+}
+@keyframes start_animation {
+    from{
+        opacity: 0;
+        transform: translateX(-25px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }  
+}
+@keyframes changecolor {
+    from{
+        background-position: 0% 0%;
+    }  
+    to{
+        background-position: 100% 100%;
+    }
 }
 
 /*responsiveness*/
@@ -145,7 +184,7 @@ a {
         grid-template-columns: 1fr 1fr;
         align-self: center;
         justify-items: center;
-        height: max-content;
+        gap: none;
     }
     .skills{
         padding: 5% 10%;
@@ -187,12 +226,14 @@ a {
     }
 }
 @media only screen and (max-width:850px){
+    .main_container{
+        width: 100dvw;
+        height: 100dvh;
+    }
     .clicks{
         width: 40px;
         height: 40px;
     }
-}
-@media only screen and (max-width:850px){
     h1{
         font-size: 24px;
     }
