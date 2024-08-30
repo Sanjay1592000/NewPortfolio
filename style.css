@@ -1,16 +1,13 @@
 :root{
-    font-family: "Oswald", sans-serif;
+    font-family: "Pixelify Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    color: white;
-    --bg-color3: rgb(86, 28, 36);
-    --bg-color4: rgb(255, 84, 107);
 }
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(90deg, var(--bg-color3), var(--bg-color4));
+    background: white;
 }
 
 .main_container {
@@ -28,13 +25,20 @@ body {
     justify-content: space-evenly;
     width: 100%;
     min-height: 100px;
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0px 5px black, inset 0px -5px black, inset 5px 0px black, inset -5px 0px black;
 }
 
-.header a{
-    display: block;
+.head{
+    display: flex;
+    align-items: center;
+    width: max-content;
+    height: 100%;
+}
+.head div{
+    display: flex;
+    align-items: center;
+    height: 100%;
     width: 0%;
-    border-bottom: 2px solid transparent;
     transition: 500ms ease-in-out;
 }
 
@@ -52,7 +56,7 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 50%;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    border: 5px solid black;
 }
 
 .about {
@@ -84,8 +88,7 @@ a {
 }
 
 .skills {
-    background-color: rgba(46, 46, 46, 0.1);
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.3);
+    border: 5px solid black;
     border-radius: 20px;
     padding: 0 5%;
     margin: 5% 0%;
@@ -155,10 +158,14 @@ a {
 .clicks:hover{
     transform: translateY(-5px);
 }
-.header a:hover{
+.head div:hover{
     width: 100%;
-    border-bottom: 2px solid white;
+    background-color: black;
+    color: white;
+    box-shadow: inset 0px -5px white, inset 0px 5px white;
 }
+
+
 @keyframes start_animation {
     from{
         opacity: 0;
@@ -169,14 +176,7 @@ a {
         transform: translateX(0px);
     }  
 }
-@keyframes changecolor {
-    from{
-        background-position: 0% 0%;
-    }  
-    to{
-        background-position: 100% 100%;
-    }
-}
+
 
 /*responsiveness*/
 @media only screen and (max-width:1200px){
