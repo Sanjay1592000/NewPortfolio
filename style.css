@@ -83,7 +83,7 @@ a {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     height: max-content;
-    padding: 25px 0;
+    margin: 25px 0;
     gap: 5%;
 }
 
@@ -91,7 +91,7 @@ a {
     border: 5px solid black;
     border-radius: 20px;
     padding: 0 5%;
-    margin: 5% 0%;
+    margin: 25px 0;
 }
 
 .lists {
@@ -242,5 +242,33 @@ a {
     }
     p{
         font-size: 14px;
+    }
+}
+
+/*Dark Mode*/
+@media (prefers-color-scheme: dark) {
+    body {
+      background-color: black;
+      color: white;
+    }
+    .header {
+        box-shadow: inset 0px 5px white, inset 0px -5px white, inset 5px 0px white, inset -5px 0px white !important;
+    }
+    .pic{
+        border: 5px solid white !important;
+    }
+    .skills{
+        border: 5px solid white !important;
+    }
+    .head div:hover{
+        background-color: white !important;
+        color: black !important;
+        box-shadow: inset 0px -5px black, inset 0px 5px black !important;
+    }
+    .clicks{
+        filter: invert(1);
+    }
+    .points img{
+        filter: invert(1);
     }
 }
